@@ -1,0 +1,20 @@
+<h1>This is as test</h1>
+
+<table>
+  <thead>
+   <th>Date</th>
+   <th>Failures</th>
+   <th>Successes</th>
+   <th>Sent</th>
+  </thead>
+  <tbody>
+    <% @message_stats.each do |stat| %>
+    <tr>
+      <td><%=stat[:created_at]%></td>
+      <td><%=stat[:failures]%></td>
+      <td><%=stat[:successfull]%></td>
+      <td><%=stat[:sent]%></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
